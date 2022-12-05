@@ -2,9 +2,9 @@
 
 **Autor:** Geoffrey Villa Vilela
 
-**Tarjeta:** PIC 18F57Q84
-
 *Practicas y trabajos del curso Micro 1*
+
+**Tarjeta:** PIC 18F57Q84
 
 **Entorno:** MPLAB IPE
 
