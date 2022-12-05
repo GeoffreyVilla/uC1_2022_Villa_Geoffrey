@@ -1,9 +1,13 @@
-Curso MicroControladores 1
+# Curso MicroControladores 1
 
-Universidad Naional de Piura - 2022
+**Autor:** Geoffrey Villa Vilela
 
-Practicas y trabajos del curso Micro 1 con el SoftWare MPLAB IPE
+**Tarjeta:** PIC 18F57Q84
 
-Microcontrolador: PIC 18F57Q84
+*Practicas y trabajos del curso Micro 1*
 
-Autor: Geoffrey Villa Vilela
+**Entorno:** MPLAB IPE
+
+**Lenguaje:** ASM - C
+
+***UNIVERSIDAD NACIONAL DE PIURA - 2022***
