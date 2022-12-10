@@ -1,8 +1,8 @@
 # Curso MicroControladores 1
 
-**Autor:** Geoffrey Villa Vilela
-
 *Practicas y trabajos del curso Micro 1*
+
+**Autor:** Geoffrey Villa Vilela
 
 **Tarjeta:** PIC 18F57Q84
 
