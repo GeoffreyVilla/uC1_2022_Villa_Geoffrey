@@ -1,3 +1,12 @@
+;--------------------------------------------------------------
+; @file:	     P1_CorrLed.s
+; @author:	Geoffrey Villa Vilela
+; @date:	     14/01/2023
+; @ide:		MPLAB X IDE v6.00
+; @brief:	     Genera un corrimiento de leds
+; @OSC:		Se utilizo un oscilador de 4MHz.
+;------------------------------------------------------------------
+
 PROCESSOR 18F57Q84
 #include "Bit_config.inc"  /config statements should precede project file includes./
 #include <xc.inc>
