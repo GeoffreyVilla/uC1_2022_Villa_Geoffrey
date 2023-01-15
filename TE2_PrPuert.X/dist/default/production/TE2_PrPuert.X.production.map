@@ -1,0 +1,325 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.40
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.40\pic\dat\20220703182018_en.msgs \
+  -cs -h+dist/default/production\TE2_PrPuert.X.production.sym \
+  --cmf=dist/default/production\TE2_PrPuert.X.production.cmf -z -Q18F57Q84 \
+  -oC:\Users\Inside\AppData\Local\Temp\xcAsb0g.4 --fixupoverflow=error \
+  -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
+  -Mdist/default/production/TE2_PrPuert.X.production.map -E1 --acfsm=1493 \
+  -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh -ASMALLCONST=04000h-040FFhx448 \
+  -AMEDIUMCONST=04000h-0FFFFh,014000h-01FFFFh -ACOMRAM=0500h-055Fh \
+  -AABS1=0500h-036FFh -ABIGRAM=0500h-036FFh \
+  -ARAM=0560h-05FFh,0600h-06FFhx49 -ABANK5=0560h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EFFh -ABANK15=0F00h-0FFFh \
+  -ABANK16=01000h-010FFh -ABANK17=01100h-011FFh -ABANK18=01200h-012FFh \
+  -ABANK19=01300h-013FFh -ABANK20=01400h-014FFh -ABANK21=01500h-015FFh \
+  -ABANK22=01600h-016FFh -ABANK23=01700h-017FFh -ABANK24=01800h-018FFh \
+  -ABANK25=01900h-019FFh -ABANK26=01A00h-01AFFh -ABANK27=01B00h-01BFFh \
+  -ABANK28=01C00h-01CFFh -ABANK29=01D00h-01DFFh -ABANK30=01E00h-01EFFh \
+  -ABANK31=01F00h-01FFFh -ABANK32=02000h-020FFh -ABANK33=02100h-021FFh \
+  -ABANK34=02200h-022FFh -ABANK35=02300h-023FFh -ABANK36=02400h-024FFh \
+  -ABANK37=02500h-025FFh -ABANK38=02600h-026FFh -ABANK39=02700h-027FFh \
+  -ABANK40=02800h-028FFh -ABANK41=02900h-029FFh -ABANK42=02A00h-02AFFh \
+  -ABANK43=02B00h-02BFFh -ABANK44=02C00h-02CFFh -ABANK45=02D00h-02DFFh \
+  -ABANK46=02E00h-02EFFh -ABANK47=02F00h-02FFFh -ABANK48=03000h-030FFh \
+  -ABANK49=03100h-031FFh -ABANK50=03200h-032FFh -ABANK51=03300h-033FFh \
+  -ABANK52=03400h-034FFh -ABANK53=03500h-035FFh -ABANK54=03600h-036FFh \
+  -ASFR=00h-0FFhx4,0400h-045Fh,0460h-04FFh,03700h-037FFhx9 \
+  -ABIGSFR=00h-04FFh,03700h-03FFFh -ACONFIG=0300023h-0300023h \
+  -AIDLOC=0200000h-020003Fh -AEEDATA=0380000h-03803FFh \
+  build/default/production/P1_CorrLed.o 
+
+Object code version is 3.11
+
+Machine type is 18F57Q84
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/production/P1_CorrLed.o
+                config                           300000   300000       23        0       4
+                CODE                                  0        0      170        0       0
+                resetVect                         1FFFC    1FFFC        4     FFFE       0
+                udata_acs                           500      500        3      500       1
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                resetVect                         1FFFC    1FFFC        4         0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+
+        CLASS   COMRAM         
+                udata_acs                           500      500        3         1
+
+        CLASS   ABS1           
+
+        CLASS   BIGRAM         
+
+        CLASS   RAM            
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   BANK16         
+
+        CLASS   BANK17         
+
+        CLASS   BANK18         
+
+        CLASS   BANK19         
+
+        CLASS   BANK20         
+
+        CLASS   BANK21         
+
+        CLASS   BANK22         
+
+        CLASS   BANK23         
+
+        CLASS   BANK24         
+
+        CLASS   BANK25         
+
+        CLASS   BANK26         
+
+        CLASS   BANK27         
+
+        CLASS   BANK28         
+
+        CLASS   BANK29         
+
+        CLASS   BANK30         
+
+        CLASS   BANK31         
+
+        CLASS   BANK32         
+
+        CLASS   BANK33         
+
+        CLASS   BANK34         
+
+        CLASS   BANK35         
+
+        CLASS   BANK36         
+
+        CLASS   BANK37         
+
+        CLASS   BANK38         
+
+        CLASS   BANK39         
+
+        CLASS   BANK40         
+
+        CLASS   BANK41         
+
+        CLASS   BANK42         
+
+        CLASS   BANK43         
+
+        CLASS   BANK44         
+
+        CLASS   BANK45         
+
+        CLASS   BANK46         
+
+        CLASS   BANK47         
+
+        CLASS   BANK48         
+
+        CLASS   BANK49         
+
+        CLASS   BANK50         
+
+        CLASS   BANK51         
+
+        CLASS   BANK52         
+
+        CLASS   BANK53         
+
+        CLASS   BANK54         
+
+        CLASS   SFR            
+
+        CLASS   BIGSFR         
+
+        CLASS   CONFIG         
+                config                           300000   300000       23         4
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   UNCLASSED
+                CODE                                  0        0      170         0
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
+
+                udata_acs                      000500  000003  000503       500       1  COMRAM  
+                resetVect                      01FFFC  000004  020000      FFFE       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK10           000A00-000AFF              100
+        BANK11           000B00-000BFF              100
+        BANK12           000C00-000CFF              100
+        BANK13           000D00-000DFF              100
+        BANK14           000E00-000EFF              100
+        BANK15           000F00-000FFF              100
+        BANK16           001000-0010FF              100
+        BANK17           001100-0011FF              100
+        BANK18           001200-0012FF              100
+        BANK19           001300-0013FF              100
+        BANK20           001400-0014FF              100
+        BANK21           001500-0015FF              100
+        BANK22           001600-0016FF              100
+        BANK23           001700-0017FF              100
+        BANK24           001800-0018FF              100
+        BANK25           001900-0019FF              100
+        BANK26           001A00-001AFF              100
+        BANK27           001B00-001BFF              100
+        BANK28           001C00-001CFF              100
+        BANK29           001D00-001DFF              100
+        BANK30           001E00-001EFF              100
+        BANK31           001F00-001FFF              100
+        BANK32           002000-0020FF              100
+        BANK33           002100-0021FF              100
+        BANK34           002200-0022FF              100
+        BANK35           002300-0023FF              100
+        BANK36           002400-0024FF              100
+        BANK37           002500-0025FF              100
+        BANK38           002600-0026FF              100
+        BANK39           002700-0027FF              100
+        BANK40           002800-0028FF              100
+        BANK41           002900-0029FF              100
+        BANK42           002A00-002AFF              100
+        BANK43           002B00-002BFF              100
+        BANK44           002C00-002CFF              100
+        BANK45           002D00-002DFF              100
+        BANK46           002E00-002EFF              100
+        BANK47           002F00-002FFF              100
+        BANK48           003000-0030FF              100
+        BANK49           003100-0031FF              100
+        BANK5            000560-0005FF               A0
+        BANK50           003200-0032FF              100
+        BANK51           003300-0033FF              100
+        BANK52           003400-0034FF              100
+        BANK53           003500-0035FF              100
+        BANK54           003600-0036FF              100
+        BANK6            000600-0006FF              100
+        BANK7            000700-0007FF              100
+        BANK8            000800-0008FF              100
+        BANK9            000900-0009FF              100
+        BIGRAM           000500-0036FF             3200
+        BIGSFR           000170-0004FF              390
+                         003700-003FFF              900
+        CODE             000170-01FFFB            1FE8C
+        COMRAM           000503-00055F               5D
+        CONFIG           300023-300023                1
+        CONST            000170-01FFFB            1FE8C
+        EEDATA           380000-3803FF              400
+        IDLOC            200000-20003F               40
+        MEDIUMCONST      004000-00FFFF             C000
+                         014000-01FFFB             BFFC
+        RAM              000560-0036FF              100
+        SFR              000170-0004FF              100
+                         003700-003FFF              100
+        SMALLCONST       004000-01FFFB              100
+
+                                  Symbol Table
+
+__HCODE         CODE         000170  __Hcode         code         000170
+__Hconfig       config       300023  __Hdata         data         000170
+__Hedata        edata        000170  __HresetVect    resetVect    000170
+__Hspace_0      (abs)        020000  __Hspace_1      (abs)        000503
+__Hspace_3      (abs)        000000  __Hspace_4      (abs)        600023
+__Hudata        udata        000170  __Hudata_acs    udata_acs    000170
+__Hudata_bank10 udata_bank10 000170  __Hudata_bank11 udata_bank11 000170
+__Hudata_bank12 udata_bank12 000170  __Hudata_bank13 udata_bank13 000170
+__Hudata_bank14 udata_bank14 000170  __Hudata_bank15 udata_bank15 000170
+__Hudata_bank16 udata_bank16 000170  __Hudata_bank17 udata_bank17 000170
+__Hudata_bank18 udata_bank18 000170  __Hudata_bank19 udata_bank19 000170
+__Hudata_bank20 udata_bank20 000170  __Hudata_bank21 udata_bank21 000170
+__Hudata_bank22 udata_bank22 000170  __Hudata_bank23 udata_bank23 000170
+__Hudata_bank24 udata_bank24 000170  __Hudata_bank25 udata_bank25 000170
+__Hudata_bank26 udata_bank26 000170  __Hudata_bank27 udata_bank27 000170
+__Hudata_bank28 udata_bank28 000170  __Hudata_bank29 udata_bank29 000170
+__Hudata_bank30 udata_bank30 000170  __Hudata_bank31 udata_bank31 000170
+__Hudata_bank32 udata_bank32 000170  __Hudata_bank33 udata_bank33 000170
+__Hudata_bank34 udata_bank34 000170  __Hudata_bank35 udata_bank35 000170
+__Hudata_bank36 udata_bank36 000170  __Hudata_bank37 udata_bank37 000170
+__Hudata_bank38 udata_bank38 000170  __Hudata_bank39 udata_bank39 000170
+__Hudata_bank40 udata_bank40 000170  __Hudata_bank41 udata_bank41 000170
+__Hudata_bank42 udata_bank42 000170  __Hudata_bank43 udata_bank43 000170
+__Hudata_bank44 udata_bank44 000170  __Hudata_bank45 udata_bank45 000170
+__Hudata_bank46 udata_bank46 000170  __Hudata_bank47 udata_bank47 000170
+__Hudata_bank48 udata_bank48 000170  __Hudata_bank49 udata_bank49 000170
+__Hudata_bank5  udata_bank5  000170  __Hudata_bank50 udata_bank50 000170
+__Hudata_bank51 udata_bank51 000170  __Hudata_bank52 udata_bank52 000170
+__Hudata_bank53 udata_bank53 000170  __Hudata_bank54 udata_bank54 000170
+__Hudata_bank6  udata_bank6  000170  __Hudata_bank7  udata_bank7  000170
+__Hudata_bank8  udata_bank8  000170  __Hudata_bank9  udata_bank9  000170
+__LCODE         CODE         000000  __Lcode         code         000170
+__Lconfig       config       000000  __Ldata         data         000170
+__Ledata        edata        000170  __LresetVect    resetVect    000170
+__Lspace_0      (abs)        000000  __Lspace_1      (abs)        000000
+__Lspace_3      (abs)        000000  __Lspace_4      (abs)        000000
+__Ludata        udata        000170  __Ludata_acs    udata_acs    000170
+__Ludata_bank10 udata_bank10 000170  __Ludata_bank11 udata_bank11 000170
+__Ludata_bank12 udata_bank12 000170  __Ludata_bank13 udata_bank13 000170
+__Ludata_bank14 udata_bank14 000170  __Ludata_bank15 udata_bank15 000170
+__Ludata_bank16 udata_bank16 000170  __Ludata_bank17 udata_bank17 000170
+__Ludata_bank18 udata_bank18 000170  __Ludata_bank19 udata_bank19 000170
+__Ludata_bank20 udata_bank20 000170  __Ludata_bank21 udata_bank21 000170
+__Ludata_bank22 udata_bank22 000170  __Ludata_bank23 udata_bank23 000170
+__Ludata_bank24 udata_bank24 000170  __Ludata_bank25 udata_bank25 000170
+__Ludata_bank26 udata_bank26 000170  __Ludata_bank27 udata_bank27 000170
+__Ludata_bank28 udata_bank28 000170  __Ludata_bank29 udata_bank29 000170
+__Ludata_bank30 udata_bank30 000170  __Ludata_bank31 udata_bank31 000170
+__Ludata_bank32 udata_bank32 000170  __Ludata_bank33 udata_bank33 000170
+__Ludata_bank34 udata_bank34 000170  __Ludata_bank35 udata_bank35 000170
+__Ludata_bank36 udata_bank36 000170  __Ludata_bank37 udata_bank37 000170
+__Ludata_bank38 udata_bank38 000170  __Ludata_bank39 udata_bank39 000170
+__Ludata_bank40 udata_bank40 000170  __Ludata_bank41 udata_bank41 000170
+__Ludata_bank42 udata_bank42 000170  __Ludata_bank43 udata_bank43 000170
+__Ludata_bank44 udata_bank44 000170  __Ludata_bank45 udata_bank45 000170
+__Ludata_bank46 udata_bank46 000170  __Ludata_bank47 udata_bank47 000170
+__Ludata_bank48 udata_bank48 000170  __Ludata_bank49 udata_bank49 000170
+__Ludata_bank5  udata_bank5  000170  __Ludata_bank50 udata_bank50 000170
+__Ludata_bank51 udata_bank51 000170  __Ludata_bank52 udata_bank52 000170
+__Ludata_bank53 udata_bank53 000170  __Ludata_bank54 udata_bank54 000170
+__Ludata_bank6  udata_bank6  000170  __Ludata_bank7  udata_bank7  000170
+__Ludata_bank8  udata_bank8  000170  __Ludata_bank9  udata_bank9  000170
+__S0            (abs)        020000  __S1            (abs)        000503
+__S3            (abs)        000000  isa$std         (abs)        000001
+isa$xinst       (abs)        000000  
