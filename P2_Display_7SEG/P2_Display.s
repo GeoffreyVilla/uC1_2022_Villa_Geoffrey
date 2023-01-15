@@ -7,211 +7,222 @@
 ;------------------------------------------------------------------
 
 PROCESSOR 18F57Q84
-#include "Bit_config.inc"  /config statements should precede project file includes./
+
+#include "Bit_config.inc"	// config statements should precede project file includes.
 #include <xc.inc>
-     
-PSECT udata_acs
- contador1: DS 1
- contador2: DS 1
- contador3: DS 1
-    
+#include "Retardos.inc"
+
 PSECT resetVect,class=CODE,reloc=2
 resetVect:
-    goto Main 
+    goto Main
     
-PSECT CODE 
+PSECT CODE
     
 Main:
-    CALL    Config_OSC,1
-    CALL    Config_Port,1
+    CALL	Config_OSC,1
+    CALL	Config_Port,1
+    MOVLW	00000000B
+    MOVWF	TRISD
 
-Off:
-    CLRF    LATC	    ;LATC<7:0> = 0  - Leds apagados
-    CLRF    LATE	    ;LATE<7:0> = 0  - Leds apagados
-    BTFSC   PORTA,3,0	    ;PORTA<3> = 0? - BUTTON PRESS?
-    GOTO    Off		    ;Loop
-    GOTO    Corrimiento   
+Num1:
+    MOVLW	11111001B	;cargamos Numero 1 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num2		;si no está presionado va al numero 2
+    GOTO	Alfa		;si está presionado va a la letra A
     
-Loop:
-    BTFSC   PORTA,3,0	    ;PORTA<3> = 0? - Button press?
-    RETURN
-    call    Delay_100ms
-    goto    stop
+Num2:
+    MOVLW	10100100B	;cargamos Numero 2 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num3		;si no está presionado va al numero 3
+    GOTO	Alfa		;si está presionado va a la letra A
     
-stop:
-    BTFSC   PORTA,3,0	    ;PORTA<3> = 0? - Button press?
-    goto    stop	    ;Loop
-    RETURN
+Num3:
+    MOVLW	10110000B	;cargamos Numero 3 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num4		;si no está presionado va al numero 4
+    GOTO	Alfa		;si está presionado va a la letra A
     
-Corrimiento:
-    N1:
-    MOVLW   00000001B	    ; w = 00000001
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000001B	    ; w = 00000001
-    MOVWF   LATE,1	    ; LED ON	
-    Call    Loop
-    CALL    Delay_250ms1,1
-   
-    N2:
-    Call    Loop
-    MOVLW   00000010B	    ; w = 00000010
-    MOVWF   LATC	    ; LED ON   
-    MOVLW   00000010B	    ; w = 00000010
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    Call    Loop
-    CALL    Delay_250ms,1
-    N3:
-    Call Loop
-    MOVLW   00000100B	    ; w = 00000100
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000001B	    ; w = 00000001
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
+Num4:
+    MOVLW	10011001B	;cargamos Numero 4 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num5		;si no está presionado va al numero 5
+    GOTO 	Alfa		;si está presionado va a la letra A
     
-    N4:
-    Call    Loop
-    MOVLW   00001000B	    ; w = 00001000
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000010B	    ; w = 00000010
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    Call    Loop
-     CALL   Delay_250ms,1
-    N5:
-    Call    Loop
-    MOVLW   00010000B	    ; w = 00010000
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000001B	    ; w = 00000001
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    N6:
-    Call    Loop
-    MOVLW   00100000B	    ; w = 00100000
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000010B	    ; w = 00000010
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    Call    Loop
-    CALL    Delay_250ms,1
-    N7:
-    Call    Loop
-    MOVLW   01000000B	    ; w = 01000000
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000001B	    ; w = 00000001
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    N8:
-    Call    Loop
-    MOVLW   10000000B	    ; w = 10000000
-    MOVWF   LATC	    ; LED ON
-    MOVLW   00000010B	    ; w = 00000010
-    MOVWF   LATE,1	    ; LED ON
-    Call    Loop
-    CALL    Delay_250ms,1
-    Call    Loop
-    CALL    Delay_250ms,1
-    Call    Loop
-    goto    N1
-    
+Num5:
+    MOVLW	10010010B	;cargamos Numero 5 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num6		;si no está presionado va al numero 6
+    GOTO	Alfa		;si está presionado va a la letra A
 
- Config_OSC:
-    ;Configuracion del oscilador interno a una frecuencia de 4MHz
-    BANKSEL OSCCON1 
-    MOVLW   0x60        ;Seleccionamos el bloque del osc con un div:1
-    MOVWF   OSCCON1
-    MOVLW   0x02        ; Seleccionamos una frecuencia de 4MHz
-    MOVWF   OSCFRQ 
+Num6:
+    MOVLW	10000010B	;cargamos Numero 6 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num7		;si no está presionado va al numero 7
+    GOTO	Alfa		;si está presionado va a la letra A
+    
+Num7:
+    MOVLW	11111000B	;cargamos Numero 7 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num8		;si no está presionado va al numero 8
+    GOTO	Alfa		;si está presionado va a la letra A
+
+Num8:
+    MOVLW	10000000B	;cargamos Numero 8 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num9		;si no está presionado va al numero 9
+    GOTO	Alfa		;si está presionado va a la letra A
+
+Num9:
+    MOVLW	10010000B	;cargamos Numero 9 en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfa		;si está presionado va a la letra A
+    
+Alfa:
+    MOVLW	00001000B	;cargamos letra A en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfb		;si está presionado va a la letra B
+    
+    
+Alfb:
+    MOVLW	00000011B	;cargamos letra B en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfc		;si está presionado va a la letra C
+
+
+Alfc:
+    MOVLW	01000110B	;cargamos letra C en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfd		;si está presionado va a la letra D
+
+    
+Alfd:
+    MOVLW	00100001B	;cargamos letra D en binario a W
+    MOVWF	PORTD		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfe		;si está presionado va a la letra E
+
+    
+Alfe:
+    MOVLW	00000110B	;cargamos letra E en binario a W
+    MOVWF	PORTD,1		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alff		;si está presionado va a la letra F
+ 
+    
+Alff:
+    BANKSEL	PORTD
+    SETF	LATD,1
+    MOVLW	00001110B	;cargamos letra F en binario a W
+    MOVWF	PORTD,1		;movemos el W al puerto D
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    CALL	Delay_250ms
+    BTFSC	PORTA,3,0	;PORTA <3> = 0  -  BUTTON PRESS
+    GOTO	Num1		;si no está presionado va al numero 1
+    GOTO	Alfa		;si está presionado va a la letra A
+
+
+Config_OSC:
+    ;configuración del oscilador interno a una frecuencia de 8MHz
+    BANKSEL	OSCCON1
+    MOVLW	0x60		;seleccionamos el bloque del oscilador interno con un div:1
+    MOVWF	OSCCON1,1
+    MOVLW	0x02		;seleccionamos una frecuencia de 8MHz
+    MOVWF	OSCFRQ,1 
     RETURN
-   
- Config_Port:  ;PORT-LAT-ANSEL-TRIS	    LED:RF3	BUTTON:RA3
-    ;Config Led
-    BANKSEL PORTC
-    CLRF    PORTC,1	; PORTC = 0 
-    CLRF    ANSELC,1	; ANSELF<7:0> = 0 -PORT F DIGITAL
-    CLRF    TRISC
+
+Config_Port:
+    ;config PORTD
+    BANKSEL	PORTD
+    CLRF	PORTD,1		;PORTD = 0 
+    BSF		LATD,7,1	;LATF = 1
+    CLRF	ANSELD,1	;ANSELF = 0 -  DIGITAL
+
     
-    ;Config Led
-    BANKSEL PORTE
-    CLRF    PORTE,1	; PORTF = 0 
-    CLRF    ANSELE,1	; ANSELF<7:0> = 0 -PORT F DIGITAL
-    CLRF    TRISE
-    
-    ;Config Button
+    ;config Button
     BANKSEL PORTA
-    CLRF    PORTA,1	; PORTA<7:0> = 0
-    CLRF    ANSELA,1	; PortA digital
-    BSF	    TRISA,3,1	; RA3 como entrada
-    BSF	    WPUA,3,1	; Activamos la resistencia Pull-Up del pin RA3
+    CLRF    PORTA,1		;PORTA> = 0 
+    CLRF    ANSELA,1		;PORTA digital
+    BSF	    TRISA,3,1		;RA3 como entrada
+    BSF	    WPUA,3,1		;Activamos la resistencia pull-up del pin RA3
     RETURN
     
-
-Delay_250ms:		    ;2Tcy -- Call
-    MOVLW   100		    ;1Tcy
-    MOVWF   contador2,0	    ;1Tcy
- 
-
-Ext_Loop_250ms:
-    MOVLW   245		    ;n*TcyTcy
-    MOVWF   contador1,0	    ;n*Tcy
-    
-Int_Loop_250ms:
-    NOP				    ;k*Tcy
-    DECFSZ  contador1,1,0	    ;((k-1) + 3)*n*Tcy
-    GOTO    Int_Loop_250ms	    ;(k-1)*2*n*Tcy
-    NOP				    ;n*Tcy
-    NOP				    ;n*Tcy
-    NOP				    ;n*Tcy
-    DECFSZ  contador2,1,0	    ;(n-1) + 3Tcy
-    GOTO    Ext_Loop_250ms	    ;(n-1)*2Tcy
-    RETURN
-    
-Delay_250ms1:			    ;2Tcy -- Call
-    MOVLW   250			    ;1Tcy
-    MOVWF   contador2,0		    ;1Tcy
- 
-
-Ext_Loop_250ms1:
-    MOVLW   247			    ;n*TcyTcy
-    MOVWF   contador1,0		    ;n*Tcy
-    
-Int_Loop_250ms1:
-    NOP				    ;k*Tcy
-    DECFSZ  contador1,1,0	    ;((k-1) + 3)*n*Tcy
-    GOTO    Int_Loop_250ms1	    ;(k-1)*2*n*Tcy
-    NOP				    ;n*Tcy
-    NOP				    ;n*Tcy
-    NOP				    ;n*Tcy
-    DECFSZ  contador2,1,0	    ;(n-1) + 3Tcy
-    GOTO    Ext_Loop_250ms1	    ;(n-1)*2Tcy
-    RETURN		
-
-    
-Delay_100ms:			    ;2Tcy -- Call
-    MOVLW   100			    ;1Tcy
-    MOVWF   contador2,0		    ;1Tcy
-
-Ext_Loop_100ms:
-    MOVLW   248			    ;n*Tcy
-    MOVWF   contador1,0		    ;n*Tcy
-    NOP				    ;n*Tcy
-Int_Loop_100ms:
-    NOP				    ;k*n*Tcy
-    DECFSZ  contador1,1,0	    ;((k-1) + 3)*n*Tcy
-    GOTO    Int_Loop_100ms	    ;(k-1)* 2*n*Tcy
-    NOP				    ;n*Tcy 
-    NOP				    ;n*Tcy
-    DECFSZ  contador2,1,0	    ;(n-1) + 3Tcy
-    GOTO    Ext_Loop_100ms	    ;(n-1) *2Tcy
-    RETURN			    ;2Tcy
 END resetVect
-
 
 
 
