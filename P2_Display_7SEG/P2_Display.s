@@ -1,3 +1,11 @@
+;--------------------------------------------------------------
+; @file:	     P2_Display.s
+; @author:	Geoffrey Villa Vilela
+; @date:	     1408/01/2023
+; @ide:		MPLAB X IDE v6.00
+; @brief:	     Hace un conteo de 0 - 9 y si se preiona el boton muestra letras desde la A -F.
+;------------------------------------------------------------------
+
 PROCESSOR 18F57Q84
 #include "Bit_config.inc"  /config statements should precede project file includes./
 #include <xc.inc>
