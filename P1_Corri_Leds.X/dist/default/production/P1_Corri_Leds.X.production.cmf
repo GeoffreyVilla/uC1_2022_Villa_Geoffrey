@@ -1,0 +1,404 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/CorrLeds.o
+CODE - 0 0 0 152 1 1
+resetVect CODE 0 1FFFC 1FFFC 4 1 2
+udata_acs COMRAM 1 500 500 2 1 1
+config CONFIG 4 300000 300000 23 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-36FF 1
+SFR 152-4FF 1
+SFR 3700-3FFF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 152-1FFFB 1
+IDLOC 200000-20003F 1
+SMALLCONST 4000-1FFFB 1
+CODE 152-1FFFB 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BANK37 2500-25FF 1
+BANK38 2600-26FF 1
+BANK39 2700-27FF 1
+BANK40 2800-28FF 1
+BANK41 2900-29FF 1
+BANK42 2A00-2AFF 1
+BANK43 2B00-2BFF 1
+BANK44 2C00-2CFF 1
+BANK45 2D00-2DFF 1
+BANK46 2E00-2EFF 1
+BANK47 2F00-2FFF 1
+BANK48 3000-30FF 1
+BANK49 3100-31FF 1
+BANK50 3200-32FF 1
+BANK51 3300-33FF 1
+BANK52 3400-34FF 1
+BANK53 3500-35FF 1
+BANK54 3600-36FF 1
+BIGRAM 500-36FF 1
+BIGSFR 152-4FF 1
+BIGSFR 3700-3FFF 1
+COMRAM 502-55F 1
+CONFIG 300023-300023 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 4000-FFFF 1
+MEDIUMCONST 14000-1FFFB 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/CorrLeds.o
+1FFFC resetVect CODE >18:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+0 CODE ABS >11:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+2 CODE ABS >12:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+4 CODE ABS >15:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+6 CODE ABS >16:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+8 CODE ABS >17:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+A CODE ABS >20:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+C CODE ABS >21:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+E CODE ABS >22:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+12 CODE ABS >23:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+14 CODE ABS >24:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+16 CODE ABS >25:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+18 CODE ABS >26:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+1C CODE ABS >27:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+1E CODE ABS >32:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+20 CODE ABS >33:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+22 CODE ABS >36:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+24 CODE ABS >37:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+26 CODE ABS >40:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+28 CODE ABS >41:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+2A CODE ABS >42:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+2E CODE ABS >43:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+30 CODE ABS >44:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+32 CODE ABS >45:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+34 CODE ABS >46:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+36 CODE ABS >47:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+3A CODE ABS >48:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X/Retardos.inc
+3C CODE ABS >23:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+40 CODE ABS >24:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+44 CODE ABS >27:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+46 CODE ABS >28:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+48 CODE ABS >29:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+4A CODE ABS >30:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+4E CODE ABS >31:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+52 CODE ABS >34:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+54 CODE ABS >35:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+56 CODE ABS >36:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+5A CODE ABS >37:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+5E CODE ABS >40:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+60 CODE ABS >41:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+64 CODE ABS >42:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+66 CODE ABS >46:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+68 CODE ABS >47:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+6A CODE ABS >48:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+6C CODE ABS >49:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+6E CODE ABS >50:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+72 CODE ABS >51:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+76 CODE ABS >54:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+7A CODE ABS >55:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+7C CODE ABS >56:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+7E CODE ABS >57:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+80 CODE ABS >58:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+82 CODE ABS >59:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+86 CODE ABS >60:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+8A CODE ABS >61:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+8E CODE ABS >62:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+92 CODE ABS >65:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+96 CODE ABS >66:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+98 CODE ABS >67:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+9A CODE ABS >68:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+9C CODE ABS >69:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+9E CODE ABS >70:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+A2 CODE ABS >71:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+A6 CODE ABS >74:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+AA CODE ABS >75:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+AC CODE ABS >76:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+AE CODE ABS >77:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+B0 CODE ABS >78:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+B2 CODE ABS >79:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+B6 CODE ABS >80:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+BA CODE ABS >81:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+BE CODE ABS >82:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+C2 CODE ABS >85:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+C6 CODE ABS >86:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+C8 CODE ABS >87:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+CA CODE ABS >88:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+CC CODE ABS >89:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+CE CODE ABS >90:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+D2 CODE ABS >91:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+D6 CODE ABS >94:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+DA CODE ABS >95:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+DC CODE ABS >96:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+DE CODE ABS >97:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+E0 CODE ABS >98:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+E2 CODE ABS >99:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+E6 CODE ABS >100:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+EA CODE ABS >101:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+EE CODE ABS >102:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+F2 CODE ABS >105:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+F6 CODE ABS >106:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+F8 CODE ABS >107:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+FA CODE ABS >108:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+FC CODE ABS >109:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+FE CODE ABS >110:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+102 CODE ABS >111:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+106 CODE ABS >114:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+10A CODE ABS >115:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+10C CODE ABS >116:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+10E CODE ABS >117:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+110 CODE ABS >118:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+112 CODE ABS >119:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+116 CODE ABS >120:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+11A CODE ABS >121:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+11E CODE ABS >122:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+122 CODE ABS >123:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+126 CODE ABS >124:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+12A CODE ABS >129:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+12C CODE ABS >130:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+12E CODE ABS >131:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+130 CODE ABS >132:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+132 CODE ABS >133:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+134 CODE ABS >134:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+136 CODE ABS >138:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+138 CODE ABS >139:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+13A CODE ABS >140:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+13C CODE ABS >141:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+13E CODE ABS >144:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+140 CODE ABS >145:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+142 CODE ABS >146:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+144 CODE ABS >147:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+146 CODE ABS >150:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+148 CODE ABS >151:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+14A CODE ABS >152:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+14C CODE ABS >153:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+14E CODE ABS >154:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+150 CODE ABS >155:D:\Ing Electronica\Ciclo IV\Micro 1\Examenes\TE2 Practica Puertos\P1_Corri_Leds.X\CorrLeds.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 20000 0 ABS 0 - -
+__Hspace_1 502 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 600023 0 ABS 0 - -
+__Hudata_bank5 152 0 ABS 0 udata_bank5 -
+__Hudata_bank6 152 0 ABS 0 udata_bank6 -
+__Hudata_bank7 152 0 ABS 0 udata_bank7 -
+__Hudata_bank8 152 0 ABS 0 udata_bank8 -
+__Hudata_bank9 152 0 ABS 0 udata_bank9 -
+__Hudata_bank10 152 0 ABS 0 udata_bank10 -
+__Hudata_bank11 152 0 ABS 0 udata_bank11 -
+__Hudata_bank12 152 0 ABS 0 udata_bank12 -
+__Hudata_bank13 152 0 ABS 0 udata_bank13 -
+__Hudata_bank14 152 0 ABS 0 udata_bank14 -
+__Hudata_bank15 152 0 ABS 0 udata_bank15 -
+__Hudata_bank16 152 0 ABS 0 udata_bank16 -
+__Hudata_bank17 152 0 ABS 0 udata_bank17 -
+__Hudata_bank18 152 0 ABS 0 udata_bank18 -
+__Hudata_bank19 152 0 ABS 0 udata_bank19 -
+__Hudata_bank20 152 0 ABS 0 udata_bank20 -
+__Hudata_bank21 152 0 ABS 0 udata_bank21 -
+__Hudata_bank22 152 0 ABS 0 udata_bank22 -
+__Hudata_bank23 152 0 ABS 0 udata_bank23 -
+__Hudata_bank24 152 0 ABS 0 udata_bank24 -
+__Hudata_bank25 152 0 ABS 0 udata_bank25 -
+__Hudata_bank26 152 0 ABS 0 udata_bank26 -
+__Hudata_bank27 152 0 ABS 0 udata_bank27 -
+__Hudata_bank28 152 0 ABS 0 udata_bank28 -
+__Hudata_bank29 152 0 ABS 0 udata_bank29 -
+__Hudata_bank30 152 0 ABS 0 udata_bank30 -
+__Hudata_bank31 152 0 ABS 0 udata_bank31 -
+__Hudata_bank32 152 0 ABS 0 udata_bank32 -
+__Hudata_bank33 152 0 ABS 0 udata_bank33 -
+__Hudata_bank34 152 0 ABS 0 udata_bank34 -
+__Hudata_bank35 152 0 ABS 0 udata_bank35 -
+__Hudata_bank36 152 0 ABS 0 udata_bank36 -
+__Hudata_bank37 152 0 ABS 0 udata_bank37 -
+__Hudata_bank38 152 0 ABS 0 udata_bank38 -
+__Hudata_bank39 152 0 ABS 0 udata_bank39 -
+__Hudata_bank40 152 0 ABS 0 udata_bank40 -
+__Hudata_bank41 152 0 ABS 0 udata_bank41 -
+__Hudata_bank42 152 0 ABS 0 udata_bank42 -
+__Hudata_bank43 152 0 ABS 0 udata_bank43 -
+__Hudata_bank44 152 0 ABS 0 udata_bank44 -
+__Hudata_bank45 152 0 ABS 0 udata_bank45 -
+__Hudata_bank46 152 0 ABS 0 udata_bank46 -
+__Hudata_bank47 152 0 ABS 0 udata_bank47 -
+__Hudata_bank48 152 0 ABS 0 udata_bank48 -
+__Hudata_bank49 152 0 ABS 0 udata_bank49 -
+__Hudata_bank50 152 0 ABS 0 udata_bank50 -
+__Hudata_bank51 152 0 ABS 0 udata_bank51 -
+__Hudata_bank52 152 0 ABS 0 udata_bank52 -
+__Hudata_bank53 152 0 ABS 0 udata_bank53 -
+__Hudata_bank54 152 0 ABS 0 udata_bank54 -
+isa$xinst 0 0 ABS 0 - build/default/production/CorrLeds.o
+__Hedata 152 0 ABS 0 edata -
+__Hudata 152 0 ABS 0 udata -
+__Hconfig 300023 0 CONFIG 4 config -
+__Ledata 152 0 ABS 0 edata -
+__Ludata 152 0 ABS 0 udata -
+__HCODE 152 0 ABS 0 CODE -
+__Hcode 152 0 ABS 0 code -
+__Hdata 152 0 ABS 0 data -
+__LCODE 0 0 ABS 0 CODE -
+__Lcode 152 0 ABS 0 code -
+__Ldata 152 0 ABS 0 data -
+__S0 20000 0 ABS 0 - -
+__S1 502 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Ludata_bank10 152 0 ABS 0 udata_bank10 -
+__Ludata_bank11 152 0 ABS 0 udata_bank11 -
+__Ludata_bank12 152 0 ABS 0 udata_bank12 -
+__Ludata_bank13 152 0 ABS 0 udata_bank13 -
+__Ludata_bank14 152 0 ABS 0 udata_bank14 -
+__Ludata_bank15 152 0 ABS 0 udata_bank15 -
+__Ludata_bank16 152 0 ABS 0 udata_bank16 -
+__Ludata_bank17 152 0 ABS 0 udata_bank17 -
+__Ludata_bank18 152 0 ABS 0 udata_bank18 -
+__Ludata_bank19 152 0 ABS 0 udata_bank19 -
+__Ludata_bank20 152 0 ABS 0 udata_bank20 -
+__Ludata_bank21 152 0 ABS 0 udata_bank21 -
+__Ludata_bank22 152 0 ABS 0 udata_bank22 -
+__Ludata_bank23 152 0 ABS 0 udata_bank23 -
+__Ludata_bank24 152 0 ABS 0 udata_bank24 -
+__Ludata_bank25 152 0 ABS 0 udata_bank25 -
+__Ludata_bank26 152 0 ABS 0 udata_bank26 -
+__Ludata_bank27 152 0 ABS 0 udata_bank27 -
+__Ludata_bank28 152 0 ABS 0 udata_bank28 -
+__Ludata_bank29 152 0 ABS 0 udata_bank29 -
+__Ludata_bank30 152 0 ABS 0 udata_bank30 -
+__Ludata_bank31 152 0 ABS 0 udata_bank31 -
+__Ludata_bank32 152 0 ABS 0 udata_bank32 -
+__Ludata_bank33 152 0 ABS 0 udata_bank33 -
+__Ludata_bank34 152 0 ABS 0 udata_bank34 -
+__Ludata_bank35 152 0 ABS 0 udata_bank35 -
+__Ludata_bank36 152 0 ABS 0 udata_bank36 -
+__Ludata_bank37 152 0 ABS 0 udata_bank37 -
+__Ludata_bank38 152 0 ABS 0 udata_bank38 -
+__Ludata_bank39 152 0 ABS 0 udata_bank39 -
+__Ludata_bank40 152 0 ABS 0 udata_bank40 -
+__Ludata_bank41 152 0 ABS 0 udata_bank41 -
+__Ludata_bank42 152 0 ABS 0 udata_bank42 -
+__Ludata_bank43 152 0 ABS 0 udata_bank43 -
+__Ludata_bank44 152 0 ABS 0 udata_bank44 -
+__Ludata_bank45 152 0 ABS 0 udata_bank45 -
+__Ludata_bank46 152 0 ABS 0 udata_bank46 -
+__Ludata_bank47 152 0 ABS 0 udata_bank47 -
+__Ludata_bank48 152 0 ABS 0 udata_bank48 -
+__Ludata_bank49 152 0 ABS 0 udata_bank49 -
+__Ludata_bank50 152 0 ABS 0 udata_bank50 -
+__Ludata_bank51 152 0 ABS 0 udata_bank51 -
+__Ludata_bank52 152 0 ABS 0 udata_bank52 -
+__Ludata_bank53 152 0 ABS 0 udata_bank53 -
+__Ludata_bank54 152 0 ABS 0 udata_bank54 -
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/production/CorrLeds.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__HresetVect 0 0 ABS 0 resetVect -
+__Ludata_bank5 152 0 ABS 0 udata_bank5 -
+__Ludata_bank6 152 0 ABS 0 udata_bank6 -
+__Ludata_bank7 152 0 ABS 0 udata_bank7 -
+__Ludata_bank8 152 0 ABS 0 udata_bank8 -
+__Ludata_bank9 152 0 ABS 0 udata_bank9 -
+__LresetVect 0 0 ABS 0 resetVect -
+__Hudata_acs 152 0 ABS 0 udata_acs -
+__Ludata_acs 152 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+resetVect 0 1FFFC 1FFFC 4 1
+udata_acs 1 500 500 2 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
